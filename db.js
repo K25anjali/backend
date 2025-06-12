@@ -9,11 +9,11 @@ const db = mysql.createConnection({
 	user: process.env.DB_USER,
 	password: process.env.DB_PASSWORD,
 });
-
+console.log("db", db)
 // Establish connection and create the schema (if it doesn't exist)
 db.connect((err) => {
 	if (err) {
-		return console.error("Error connecting to MySQL: " + err.message);
+		return console.error("Error connecting to MySQL: " + err);
 	}
 	console.log("Connected to MySQL server.");
 
